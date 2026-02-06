@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TITLE</title>
+		<meta name="robots" content="noindex" />
+		<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="./assets/css/fancybox.css">
+		<link rel="stylesheet" href="./assets/css/main.css">
+		
+	</head>
+	<body>
+		<div class="search__panel">
+			<div class="container">
+				<form>
+					<div class="search__panel-form">
+						<label for="search">
+							<input id="search" type="text" placeholder="">
+						</label>
+						<input type="submit" class="btn btn-color" value="Найти">
+					</div>
+				</form>
+
+				<div class="close">
+					<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.36336 5.65738L11.3131 10.6071L10.606 11.3142L5.65625 6.36449L0.706503 11.3142L-0.000604153 10.6071L4.94914 5.65738L-0.000604153 0.707635L0.706503 0.000528634L5.65625 4.95028L10.606 0.000528634L11.3131 0.707635L6.36336 5.65738Z" fill="#636363"/>
+					</svg>
+					Закрыть
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header__top">
+					<div class="header__logo">
+						<a href="/"><img src="./assets/images/logo.svg" alt="logo"></a>
+						<div class="text only-mobile">
+							Наукоград<br>Кольцово
+						</div>
+					</div>
+					<div class="header__info">
+						<div class="header__info-top">
+							<div class="header__weather">
+								<div class="header__weather-item">
+									Cегодня: -17°c
+									<svg width="20" height="20"><use xlink:href="./assets/images/sprite.svg#sun"></use></svg>
+								</div>
+								<div class="header__weather-item">
+									Завтра: -10°c
+									<svg width="20" height="20"><use xlink:href="./assets/images/sprite.svg#sun"></use></svg>
+								</div>
+							</div>
+							<div class="header__links">
+								<div class="header__links-item">
+									<a href="#">
+										<svg width="31" height="20"><use xlink:href="./assets/images/sprite.svg#email"></use></svg>
+										Интернет приемная
+									</a>
+								</div>
+								<div class="header__links-item">
+									<a href="#">
+										<svg width="23" height="20"><use xlink:href="./assets/images/sprite.svg#vision"></use></svg>
+										Версия для слабовидящих
+									</a>
+								</div>
+								<div class="header__links-item">
+									<a href="#">
+										<svg width="23" height="20"><use xlink:href="./assets/images/sprite.svg#search"></use></svg>
+										Поиск по сайту
+									</a>
+								</div>
+								<div class="header__links-item">
+									<a href="#" class="lang">RU</a>
+								</div>
+							</div>
+						</div>
+						<nav class="header__nav">
+							<ul>
+								<li><a href="#">Наукоград</a></li>
+								<li class="item-has-children"><a href="#">Муниципалитет</a>
+									<ul class="sub-menu">
+										<li><a href="#">Глава рабочего поселка</a></li>
+										<li class="item-has-children"><a href="#">Администрация</a>
+											<ul class="sub-menu">
+												<li><a href="#">Структура администрации</a></li>
+												<li><a href="#">Торги/конкурсы</a></li>
+												<li><a href="#">Муниципальная служба</a></li>
+												<li><a href="#">Общественная приемная</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Совет депутатов</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Контрольно-счетный орган</a></li>
+										<li><a href="#">Центр бухгалтерского учета и отчетности</a></li>
+										<li><a href="#">Комиссии</a></li>
+										<li><a href="#">Раскрытие информации</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Жителям</a></li>
+								<li><a href="#">Туристам</a></li>
+								<li><a href="#">Предпринимателям</a></li>
+								<li><a href="#">Инвесторам</a></li>
+								<li><a href="#">СМИ</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="mobile__navigation only-mobile">
+						<div class="search-button">
+							<svg width="23" height="20"><use xlink:href="./assets/images/sprite.svg#search"></use></svg>
+						</div>
+						<div id="burger">
+							<svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 0V3.42857H34V0H0ZM0 10.2857V13.7143H34V10.2857H0ZM0 20.5714V24H34V20.5714H0Z" fill="white"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="header__bottom-img">
+						<img src="./assets/images/header.svg" alt="Наукоград Кольцово территория инноваций">
+					</div>
+					<div class="header__title">
+						Наукоград Кольцово <span>территория инноваций</span>
+					</div>
+					<div class="header__button">
+						<a href="#" class="btn btn-white">Афиша событий</a>
+					</div>
+					<div class="header__text">
+						<span>20 942</span> численность населения <br>01.01.2025
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="section container news">
+				<div class="section__title">
+					<h2 class="page__title">
+						Новости
+					</h2>
+					<div class="button__more only-mobile">
+						<a href="#">
+							<span>Все новости</span>
+							<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.3536 4.03519C12.5488 3.83993 12.5488 3.52335 12.3536 3.32809L9.17157 0.146107C8.97631 -0.0491555 8.65973 -0.0491555 8.46447 0.146107C8.2692 0.341369 8.2692 0.657951 8.46447 0.853214L11.2929 3.68164L8.46447 6.51007C8.2692 6.70533 8.2692 7.02191 8.46447 7.21717C8.65973 7.41244 8.97631 7.41244 9.17157 7.21717L12.3536 4.03519ZM0 3.68164L0 4.18164L12 4.18164V3.68164V3.18164L0 3.18164L0 3.68164Z" fill="#105980"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="section__body">
+					<div class="news__list">
+						<div class="news__block big">
+							<div class="news__item">
+								<div class="news__item-img">
+									<a href="#"><img src="./assets/images/news_1.png" alt="Новость 1"></a>
+								</div>
+								<div class="news__item-content">
+									<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+									<div class="news__item-date only-mobile">
+										5 декабря 2025 г
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="news__block small">
+							<div class="news__item">
+								<div class="news__item-img">
+									<img src="./assets/images/news_6.png" alt="Новость 2">
+								</div>
+								<div class="news__item-content">
+									<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+									<div class="news__item-date only-mobile">
+										5 декабря 2025 г
+									</div>
+								</div>
+							</div>
+							<div class="news__item">
+								<div class="news__item-img">
+									<img src="./assets/images/news_3.png" alt="Новость 3">
+								</div>
+								<div class="news__item-content">
+									<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+									<div class="news__item-date only-mobile">
+										5 декабря 2025 г
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news__slider-main">
+						<div class="slider__prev only-desktop">
+							<svg width="19" height="33"><use xlink:href="./assets/images/sprite.svg#arrow-left"></use></svg>
+						</div>
+						<div class="news__slider swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_4.png" alt="Новость 1">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_5.png" alt="Новость 2">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_6.png" alt="Новость 3">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_4.png" alt="Новость 1">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_5.png" alt="Новость 2">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_6.png" alt="Новость 3">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider__next only-desktop">		
+							<svg width="19" height="33"><use xlink:href="./assets/images/sprite.svg#arrow-right"></use></svg>
+						</div>
+						<div class="slider__pagination only-mobile"></div>
+					</div>
+					<div class="news__more only-desktop">
+						<a href="#" class="btn">Все новости</a>
+					</div>
+				</div>
+			</section>
+			<section class="section container useful">
+				<div class="section__title">
+					<h2 class="page__title">
+						Полезные ссылки
+					</h2>
+				</div>
+				<div class="section__body">
+					<div class="useful__list">
+						<div class="useful__item">
+							<a href="#">
+								Что то про здоровье <img src="./assets/images/useful_1.png" alt="Что то про здоровье">
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Что то про ОАТОС <img src="./assets/images/useful_2.png" alt="Что то про ОАТОС">
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								ГОСУСЛУГИ <img src="./assets/images/useful_3.png" alt="ГОСУСЛУГИ">
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Генеральный план
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Градостроительная документация
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								О Кольцово
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Открытый бюджет Новосибирской области
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Общественная экспертиза
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Постановление
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Торги
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Аренда муниципального имущества
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Услуги
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Официальный интернет-портал правовой информации
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Инвестиции
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Публичные слушания и общественные обсуждения
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Бизнес
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Туристический портал Новосибирской области
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Противодействие коррупции
+							</a>
+						</div>
+						<div class="useful__item">
+							<a href="#">
+								Муниципальное имущество
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section video">
+				<div class="container">
+					<div class="section__title">
+						<h2 class="page__title">
+							Видео
+						</h2>
+						<div class="button__more only-mobile">
+							<a href="#">
+								<span>Все видео</span>
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.3536 4.03519C12.5488 3.83993 12.5488 3.52335 12.3536 3.32809L9.17157 0.146107C8.97631 -0.0491555 8.65973 -0.0491555 8.46447 0.146107C8.2692 0.341369 8.2692 0.657951 8.46447 0.853214L11.2929 3.68164L8.46447 6.51007C8.2692 6.70533 8.2692 7.02191 8.46447 7.21717C8.65973 7.41244 8.97631 7.41244 9.17157 7.21717L12.3536 4.03519ZM0 3.68164L0 4.18164L12 4.18164V3.68164V3.18164L0 3.18164L0 3.68164Z" fill="#105980"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="section__body video__container container">
+					<div class="slider__prev only-desktop">
+						<svg width="19" height="33"><use xlink:href="./assets/images/sprite.svg#arrow-left"></use></svg>
+					</div>
+					<div class="video__list swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="video__item">
+									<div class="video__item-thumb">
+										<img src="./assets/images/video_1.png" alt="Видео 1">
+										<div class="video__item-time">
+											01:55
+										</div>
+									</div>
+									<div class="video__item-title">Посмотри, какое лето!</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="video__item">
+									<div class="video__item-thumb">
+										<img src="./assets/images/video_2.png" alt="Видео 2">
+										<div class="video__item-time">
+											01:55
+										</div>
+									</div>
+									<div class="video__item-title">Посмотри, какое лето!</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="video__item">
+									<div class="video__item-thumb">
+										<img src="./assets/images/video_3.png" alt="Видео 3">
+										<div class="video__item-time">
+											01:55
+										</div>
+									</div>
+									<div class="video__item-title">Посмотри, какое лето!</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="video__item">
+									<div class="video__item-thumb">
+										<img src="./assets/images/video_1.png" alt="Видео 1">
+										<div class="video__item-time">
+											01:55
+										</div>
+									</div>
+									<div class="video__item-title">Посмотри, какое лето!</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="video__item">
+									<div class="video__item-thumb">
+										<img src="./assets/images/video_2.png" alt="Видео 2">
+										<div class="video__item-time">
+											01:55
+										</div>
+									</div>
+									<div class="video__item-title">Посмотри, какое лето!</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="video__item">
+									<div class="video__item-thumb">
+										<img src="./assets/images/video_3.png" alt="Видео 3">
+										<div class="video__item-time">
+											01:55
+										</div>
+									</div>
+									<div class="video__item-title">Посмотри, какое лето!</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slider__next only-desktop">		
+						<svg width="19" height="33"><use xlink:href="./assets/images/sprite.svg#arrow-right"></use></svg>
+					</div>
+					<div class="slider__pagination only-mobile"></div>
+					<div class="video__more only-desktop">
+						<a href="#" class="btn">Все видео</a>
+					</div>
+				</div>
+			</section>
+			<section class="section gallery">
+				<div class="container">
+					<div class="section__title">
+						<h2 class="page__title">
+							Галерея
+						</h2>
+						<div class="button__more only-mobile">
+							<a href="#">
+								<span>Все фото</span>
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.3536 4.03519C12.5488 3.83993 12.5488 3.52335 12.3536 3.32809L9.17157 0.146107C8.97631 -0.0491555 8.65973 -0.0491555 8.46447 0.146107C8.2692 0.341369 8.2692 0.657951 8.46447 0.853214L11.2929 3.68164L8.46447 6.51007C8.2692 6.70533 8.2692 7.02191 8.46447 7.21717C8.65973 7.41244 8.97631 7.41244 9.17157 7.21717L12.3536 4.03519ZM0 3.68164L0 4.18164L12 4.18164V3.68164V3.18164L0 3.18164L0 3.68164Z" fill="#105980"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="section__body container">
+					<div class="gallery__container">
+						<div class="slider__prev only-desktop">		
+							<svg width="19" height="33"><use xlink:href="./assets/images/sprite.svg#arrow-left"></use></svg>
+						</div>
+						<div class="gallery__list swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_1.jpg" alt="Фото 1">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_2.jpg" alt="Фото 2">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_1.jpg" alt="Фото 1">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_2.jpg" alt="Фото 2">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_1.jpg" alt="Фото 1">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_2.jpg" alt="Фото 2">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_1.jpg" alt="Фото 1">
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery__item">
+										<img src="./assets/images/gallery_2.jpg" alt="Фото 2">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider__next only-desktop">		
+							<svg width="19" height="33"><use xlink:href="./assets/images/sprite.svg#arrow-right"></use></svg>
+						</div>
+						<div class="slider__pagination only-mobile"></div>
+					</div>
+					<div class="gallery__more only-desktop">
+						<a href="#" class="btn">Все фото</a>
+					</div>
+				</div>
+			</section>
+			<section class="section facts">
+				<div class="section__title container">
+					<h2 class="page__title">
+						Интересные факты
+					</h2>
+				</div>
+				<div class="section__body facts__container">
+					<div class="facts__list container">
+						<div class="facts__item">
+							<div class="facts__inner">
+								<div class="facts__item-title">
+									2 млрд
+								</div>
+								<div class="facts__item-text">
+									Составляет бюджет Кольцово
+								</div>
+							</div>
+						</div>
+						<div class="facts__item">
+							<div class="facts__inner">
+								<div class="facts__item-title">
+									до 2040 г
+								</div>
+								<div class="facts__item-text">
+									Продлили статус наукограда
+								</div>
+							</div>
+						</div>
+						<div class="facts__item">
+							<div class="facts__inner">
+								<div class="facts__item-title">
+									129
+								</div>
+								<div class="facts__item-text">
+									выделено квартир в “Научном доме”
+								</div>
+							</div>
+						</div>
+						<div class="facts__item">
+							<div class="facts__inner">
+								<div class="facts__item-title">
+									9154
+								</div>
+								<div class="facts__item-text">
+									астероид из группы главного пояса назван в честь Кольцово
+								</div>
+							</div>
+						</div>
+						<div class="facts__item">
+							<div class="facts__inner">
+								<div class="facts__item-title">
+									220 000
+								</div>
+								<div class="facts__item-text">
+									Уроков проведено в 2025 году
+								</div>
+							</div>
+						</div>
+						<div class="facts__item">
+							<div class="facts__inner">
+								<div class="facts__item-title">
+									30
+								</div>
+								<div class="facts__item-text">
+									научных станций построят на СКИФе
+								</div>
+							</div>
+						</div>
+						<div class="facts__item center">
+							<div class="facts__inner">
+								Наукоград<br>Кольцово
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section container banner">
+				<div class="section__body">
+					<picture>
+						<source data-srcset="./assets/images/banner-question__mobile.png" media="(max-width: 576px)" srcset="./assets/images/banner-question__mobile.png">
+						<img data-src="./assets/images/banner-question.png" alt="" src="./assets/images/banner-question.png">
+					</picture>
+				</div>
+			</section>
+			<section class="section footer__links">
+				<div class="container">
+					<div class="section__body">
+						<div class="footer__links-logo">
+							<img src="./assets/images/logo-footer.svg" alt="logo">
+							<div class="text">
+								Наукоград Кольцово<br><span>Официальный сайт</span>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__menu-item">
+								<div class="footer__menu-title">
+									Полезное
+								</div>
+								<ul>
+									<li><a href="#">Расписание</a></li>
+									<li><a href="#">Работа в Кольцово</a></li>
+								</ul>
+							</div>
+							<div class="footer__menu-item">
+								<div class="footer__menu-title">
+									Обратная связь
+								</div>
+								<ul>
+									<li><a href="#">Интернет-приемная</a></li>
+									<li><a href="#">Оценить ответ на обращение</a></li>
+								</ul>
+							</div>
+							<div class="footer__menu-item">
+								<div class="footer__menu-title">
+									Важное
+								</div>
+								<ul>
+									<li><a href="#">Бюджет для граждан</a></li>
+									<li><a href="#">Устав р.п. Кольцово</a></li>
+								</ul>
+							</div>
+							<div class="footer__menu-item social only-mobile">
+									<a href="#">
+										<svg viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M20.6969 24C7.71385 24 0.30856 14.991 0 0H6.50347C6.71703 11.003 11.5114 15.6637 15.3091 16.6246V0H21.433V9.48944C25.1831 9.08105 29.1227 4.75672 30.4518 0H36.5757C35.5551 5.86182 31.2827 10.1862 28.2446 11.964C31.2827 13.4054 36.1486 17.1772 38 24H31.259C29.8112 19.4354 26.2037 15.9039 21.433 15.4234V24H20.6969Z" fill="white"/>
+										</svg>
+									</a>
+									<a href="#">
+										<svg viewBox="0 0 19 32" fill="none">
+											<path d="M9.50049 15.9886C13.9156 15.9886 17.4948 12.4094 17.4948 7.99427C17.4948 3.57916 13.9156 0 9.50049 0C5.08532 0 1.50616 3.57916 1.50616 7.99427C1.50616 12.4094 5.08532 15.9886 9.50049 15.9886ZM9.50049 4.0614C11.6726 4.0614 13.4334 5.82215 13.4334 7.99427C13.4334 10.1664 11.6726 11.9272 9.50049 11.9272C7.32831 11.9272 5.56756 10.1664 5.56756 7.99427C5.56756 5.82261 7.32831 4.0614 9.50049 4.0614ZM18.7152 16.9639C18.2637 16.0571 17.014 15.3028 15.3524 16.612C13.107 18.3813 9.49997 18.3813 9.49997 18.3813C9.49997 18.3813 5.89296 18.3813 3.64761 16.612C1.9865 15.3028 0.736308 16.0571 0.284793 16.9639C-0.502058 18.5447 0.386788 19.3085 2.39317 20.5964C4.10671 21.6964 6.46117 22.1073 7.98198 22.2613L6.71289 23.5304C4.9252 25.3181 3.19943 27.0439 2.00212 28.2412C1.28609 28.9567 1.28609 30.1177 2.00212 30.8337L2.21795 31.0495C2.93399 31.7656 4.09442 31.7651 4.81046 31.0495L9.52128 26.3388C11.309 28.1265 13.0347 29.8522 14.232 31.0495C14.9476 31.7656 16.1085 31.7656 16.8246 31.0495L17.0404 30.8337C17.7564 30.1177 17.756 28.9572 17.0404 28.2412L12.3296 23.5304L11.0563 22.2576C12.5781 22.1007 14.9075 21.6879 16.6068 20.5969C18.6132 19.3089 19.5021 18.5447 18.7152 16.9639Z"/>
+										</svg>
+									</a>
+									<a href="#">
+										<svg viewBox="0 0 36 30" fill="none">
+											<path d="M34.5176 0.507812C34.8411 0.536029 35.0847 0.637858 35.2422 0.823242C35.3987 1.00757 35.5478 1.366 35.4854 2.07617L35.4844 2.08398C35.4401 2.70575 35.2143 4.13613 34.9111 6.06543C34.6105 7.97829 34.2397 10.3495 33.915 12.8145L31.6963 27.3672L31.6943 27.3828L31.6924 27.3975V27.3994C31.6922 27.4014 31.692 27.405 31.6914 27.4102C31.6901 27.4215 31.688 27.4403 31.6846 27.4648C31.6776 27.5142 31.6655 27.5882 31.6465 27.6787C31.608 27.8611 31.5423 28.1046 31.4326 28.3545C31.2098 28.8622 30.8438 29.3225 30.2314 29.459C29.5738 29.6053 28.6672 29.3491 27.7891 28.9375C26.935 28.5371 26.229 28.0477 26.0283 27.8867L26.0225 27.8818L26.0156 27.877C25.9057 27.7944 25.4015 27.4653 24.7139 27.0137C24.0105 26.5517 23.0838 25.9423 22.0977 25.2773C20.115 23.9404 17.9226 22.4042 16.7949 21.4092L16.79 21.4053L16.6855 21.3096C16.4468 21.0794 16.2543 20.7975 16.207 20.5C16.1601 20.2045 16.2371 19.7613 16.8867 19.1914L16.9023 19.1777L26.6152 9.90234H26.6162L26.624 9.89355C26.9351 9.58165 27.2426 9.17123 27.4541 8.77637C27.5598 8.57914 27.6509 8.36896 27.7021 8.16504C27.7499 7.97465 27.781 7.71716 27.6807 7.47266C27.5598 7.17842 27.3004 7.02041 27.0137 6.98438C26.7606 6.95261 26.4777 7.0105 26.1855 7.11133C25.5915 7.31636 24.7482 7.77585 23.583 8.57031L10.6426 17.375C10.6364 17.3785 10.6272 17.3835 10.6152 17.3896C10.5822 17.4067 10.5273 17.433 10.4512 17.4639C10.2989 17.5257 10.0606 17.6059 9.73926 17.6631C9.09997 17.7767 8.11773 17.803 6.80859 17.4102L0.869141 15.5791C0.866732 15.5773 0.863889 15.5752 0.861328 15.5732C0.822417 15.5435 0.769717 15.4994 0.71582 15.4443C0.598838 15.3248 0.521289 15.199 0.503906 15.0869C0.49208 15.0105 0.493051 14.8591 0.726562 14.625C0.977643 14.3733 1.47232 14.0566 2.39062 13.7197L2.41113 13.7119L2.43164 13.7031C10.5135 9.89447 20.2185 6.01593 29.2832 2.30566L33.1123 0.730469C33.113 0.730194 33.1145 0.730124 33.1162 0.729492C33.1204 0.727909 33.1279 0.7252 33.1377 0.72168C33.1575 0.714563 33.1879 0.70328 33.2275 0.69043C33.3075 0.6645 33.4233 0.630178 33.5615 0.597656C33.8439 0.531208 34.1932 0.47957 34.5176 0.507812ZM0.913086 15.6104H0.912109H0.913086Z" stroke="#C0C6E0"/>
+										</svg>
+									</a>
+									<a href="#">
+										<svg viewBox="0 0 36 36" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M18.3868 35.8973C14.8538 35.8973 13.212 35.3793 10.3581 33.3073C8.55298 35.6383 2.83667 37.4599 2.58738 34.3433C2.58738 32.0037 2.07163 30.0266 1.4871 27.8683C0.790829 25.2092 0 22.248 0 17.9573C0 7.70954 8.37247 0 18.2922 0C28.2205 0 35.9999 8.0894 35.9999 18.0522C36.0332 27.861 28.153 35.8449 18.3868 35.8973ZM18.5329 8.85777C13.702 8.6074 9.93693 11.9658 9.10312 17.2321C8.41545 21.5919 9.63607 26.9014 10.6762 27.1776C11.1748 27.2985 12.4298 26.2798 13.212 25.4941C14.5055 26.3916 16.0117 26.9306 17.5787 27.0568C22.5844 27.2986 26.8615 23.4712 27.1976 18.4494C27.3933 13.4169 23.5392 9.15439 18.5329 8.8664L18.5329 8.85777Z"/>
+										</svg>
+									</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__contacts">
+					<div class="footer__contacts-item">
+						<div class="footer__contacts-title">
+							Звоните:
+						</div>
+						<div class="footer__contacts-text">
+							<a href="tel:83833366550">8 (383) 336-65-50</a>
+							<span class="small">У нас разница с Москвой + 4 часа</span>
+						</div>
+					</div>
+					
+					<div class="footer__contacts-item">
+						<div class="footer__contacts-title">
+							SMS-сообщения:
+						</div>
+						<div class="footer__contacts-text">
+							<a href="tel:89130001783">8 (913) 000-17-83 </a>
+						</div>
+					</div>
+					<div class="footer__contacts-item">
+						<div class="footer__contacts-title">
+							Адрес:
+						</div>
+						<div class="footer__contacts-text">
+							630559, Новосибирская область, р. п. Кольцово, Никольский пр-т, 1, офис 400
+						</div>
+					</div>
+					<div class="footer__contacts-item">
+						<div class="footer__contacts-title">
+							Пишите:
+						</div>
+						<div class="footer__contacts-text">
+							<a href="mailto:adm@kolzovo.ru">adm@kolzovo.ru</a>
+						</div>
+					</div>
+					<div class="footer__contacts-item social">
+						<a href="#">
+							<svg width="38" height="24" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.6969 24C7.71385 24 0.30856 14.991 0 0H6.50347C6.71703 11.003 11.5114 15.6637 15.3091 16.6246V0H21.433V9.48944C25.1831 9.08105 29.1227 4.75672 30.4518 0H36.5757C35.5551 5.86182 31.2827 10.1862 28.2446 11.964C31.2827 13.4054 36.1486 17.1772 38 24H31.259C29.8112 19.4354 26.2037 15.9039 21.433 15.4234V24H20.6969Z" fill="white"/>
+							</svg>
+						</a>
+						<a href="#">
+							<svg width="19" height="32" viewBox="0 0 19 32" fill="none">
+								<path d="M9.50049 15.9886C13.9156 15.9886 17.4948 12.4094 17.4948 7.99427C17.4948 3.57916 13.9156 0 9.50049 0C5.08532 0 1.50616 3.57916 1.50616 7.99427C1.50616 12.4094 5.08532 15.9886 9.50049 15.9886ZM9.50049 4.0614C11.6726 4.0614 13.4334 5.82215 13.4334 7.99427C13.4334 10.1664 11.6726 11.9272 9.50049 11.9272C7.32831 11.9272 5.56756 10.1664 5.56756 7.99427C5.56756 5.82261 7.32831 4.0614 9.50049 4.0614ZM18.7152 16.9639C18.2637 16.0571 17.014 15.3028 15.3524 16.612C13.107 18.3813 9.49997 18.3813 9.49997 18.3813C9.49997 18.3813 5.89296 18.3813 3.64761 16.612C1.9865 15.3028 0.736308 16.0571 0.284793 16.9639C-0.502058 18.5447 0.386788 19.3085 2.39317 20.5964C4.10671 21.6964 6.46117 22.1073 7.98198 22.2613L6.71289 23.5304C4.9252 25.3181 3.19943 27.0439 2.00212 28.2412C1.28609 28.9567 1.28609 30.1177 2.00212 30.8337L2.21795 31.0495C2.93399 31.7656 4.09442 31.7651 4.81046 31.0495L9.52128 26.3388C11.309 28.1265 13.0347 29.8522 14.232 31.0495C14.9476 31.7656 16.1085 31.7656 16.8246 31.0495L17.0404 30.8337C17.7564 30.1177 17.756 28.9572 17.0404 28.2412L12.3296 23.5304L11.0563 22.2576C12.5781 22.1007 14.9075 21.6879 16.6068 20.5969C18.6132 19.3089 19.5021 18.5447 18.7152 16.9639Z"/>
+							</svg>
+						</a>
+						<a href="#">
+							<svg  width="36" height="30" viewBox="0 0 36 30" fill="none">
+								<path d="M34.5176 0.507812C34.8411 0.536029 35.0847 0.637858 35.2422 0.823242C35.3987 1.00757 35.5478 1.366 35.4854 2.07617L35.4844 2.08398C35.4401 2.70575 35.2143 4.13613 34.9111 6.06543C34.6105 7.97829 34.2397 10.3495 33.915 12.8145L31.6963 27.3672L31.6943 27.3828L31.6924 27.3975V27.3994C31.6922 27.4014 31.692 27.405 31.6914 27.4102C31.6901 27.4215 31.688 27.4403 31.6846 27.4648C31.6776 27.5142 31.6655 27.5882 31.6465 27.6787C31.608 27.8611 31.5423 28.1046 31.4326 28.3545C31.2098 28.8622 30.8438 29.3225 30.2314 29.459C29.5738 29.6053 28.6672 29.3491 27.7891 28.9375C26.935 28.5371 26.229 28.0477 26.0283 27.8867L26.0225 27.8818L26.0156 27.877C25.9057 27.7944 25.4015 27.4653 24.7139 27.0137C24.0105 26.5517 23.0838 25.9423 22.0977 25.2773C20.115 23.9404 17.9226 22.4042 16.7949 21.4092L16.79 21.4053L16.6855 21.3096C16.4468 21.0794 16.2543 20.7975 16.207 20.5C16.1601 20.2045 16.2371 19.7613 16.8867 19.1914L16.9023 19.1777L26.6152 9.90234H26.6162L26.624 9.89355C26.9351 9.58165 27.2426 9.17123 27.4541 8.77637C27.5598 8.57914 27.6509 8.36896 27.7021 8.16504C27.7499 7.97465 27.781 7.71716 27.6807 7.47266C27.5598 7.17842 27.3004 7.02041 27.0137 6.98438C26.7606 6.95261 26.4777 7.0105 26.1855 7.11133C25.5915 7.31636 24.7482 7.77585 23.583 8.57031L10.6426 17.375C10.6364 17.3785 10.6272 17.3835 10.6152 17.3896C10.5822 17.4067 10.5273 17.433 10.4512 17.4639C10.2989 17.5257 10.0606 17.6059 9.73926 17.6631C9.09997 17.7767 8.11773 17.803 6.80859 17.4102L0.869141 15.5791C0.866732 15.5773 0.863889 15.5752 0.861328 15.5732C0.822417 15.5435 0.769717 15.4994 0.71582 15.4443C0.598838 15.3248 0.521289 15.199 0.503906 15.0869C0.49208 15.0105 0.493051 14.8591 0.726562 14.625C0.977643 14.3733 1.47232 14.0566 2.39062 13.7197L2.41113 13.7119L2.43164 13.7031C10.5135 9.89447 20.2185 6.01593 29.2832 2.30566L33.1123 0.730469C33.113 0.730194 33.1145 0.730124 33.1162 0.729492C33.1204 0.727909 33.1279 0.7252 33.1377 0.72168C33.1575 0.714563 33.1879 0.70328 33.2275 0.69043C33.3075 0.6645 33.4233 0.630178 33.5615 0.597656C33.8439 0.531208 34.1932 0.47957 34.5176 0.507812ZM0.913086 15.6104H0.912109H0.913086Z" stroke="#C0C6E0"/>
+							</svg>
+						</a>
+						<a href="#">
+							<svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.3868 35.8973C14.8538 35.8973 13.212 35.3793 10.3581 33.3073C8.55298 35.6383 2.83667 37.4599 2.58738 34.3433C2.58738 32.0037 2.07163 30.0266 1.4871 27.8683C0.790829 25.2092 0 22.248 0 17.9573C0 7.70954 8.37247 0 18.2922 0C28.2205 0 35.9999 8.0894 35.9999 18.0522C36.0332 27.861 28.153 35.8449 18.3868 35.8973ZM18.5329 8.85777C13.702 8.6074 9.93693 11.9658 9.10312 17.2321C8.41545 21.5919 9.63607 26.9014 10.6762 27.1776C11.1748 27.2985 12.4298 26.2798 13.212 25.4941C14.5055 26.3916 16.0117 26.9306 17.5787 27.0568C22.5844 27.2986 26.8615 23.4712 27.1976 18.4494C27.3933 13.4169 23.5392 9.15439 18.5329 8.8664L18.5329 8.85777Z"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__bottom-left">
+						<a href="#" class="vision">
+							<svg width="31" height="27" viewBox="0 0 31 27"><use xlink:href="./assets/images/sprite.svg#vision"></use></svg>
+							Версия для слабовидящих
+						</a>
+					</div>
+					<div class="footer__bottom-right">
+						<p>Нашли ошибку? Выделите её, нажмите ctrl+Enter, и мы всё исправим.</p>
+						<p>© 2009-2025 Администрация р. п. Кольцово. Дата обновления информации 09.08.2025</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<div class="mobile__menu">
+			<div class="mobile__menu-nav">
+				<ul>
+					<li><a href="#">Наукоград</a></li>
+					<li class="item-has-children"><a href="#">Муниципалитет</a>
+						<ul class="sub-menu">
+							<li><a href="#">Глава рабочего поселка</a></li>
+							<li class="item-has-children"><a href="#">Администрация</a>
+								<ul class="sub-menu">
+									<li><a href="#">Структура администрации</a></li>
+									<li><a href="#">Торги/конкурсы</a></li>
+									<li><a href="#">Муниципальная служба</a></li>
+									<li><a href="#">Общественная приемная</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Совет депутатов</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Контрольно-счетный орган</a></li>
+							<li><a href="#">Центр бухгалтерского учета и отчетности</a></li>
+							<li><a href="#">Комиссии</a></li>
+							<li><a href="#">Раскрытие информации</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Жителям</a></li>
+					<li><a href="#">Туристам</a></li>
+					<li><a href="#">Предпринимателям</a></li>
+					<li><a href="#">Инвесторам</a></li>
+					<li><a href="#">СМИ</a></li>
+				</ul>
+			</div>
+			<div class="mobile__menu-info header__links">
+				<div class="header__links-item">
+					<a href="#">
+						<svg width="31" height="20"><use xlink:href="./assets/images/sprite.svg#email"></use></svg>
+						Интернет приемная
+					</a>
+				</div>
+				<div class="header__links-item">
+					<a href="#" class="lang">RU</a>
+				</div>
+				<div class="header__links-item">
+					<a href="#">
+						<svg width="23" height="20"><use xlink:href="./assets/images/sprite.svg#vision"></use></svg>
+						Версия для слабовидящих
+					</a>
+				</div>
+				<div class="mobile__menu-socail">
+					<a href="#">
+						<svg viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.6969 24C7.71385 24 0.30856 14.991 0 0H6.50347C6.71703 11.003 11.5114 15.6637 15.3091 16.6246V0H21.433V9.48944C25.1831 9.08105 29.1227 4.75672 30.4518 0H36.5757C35.5551 5.86182 31.2827 10.1862 28.2446 11.964C31.2827 13.4054 36.1486 17.1772 38 24H31.259C29.8112 19.4354 26.2037 15.9039 21.433 15.4234V24H20.6969Z" fill="white"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg viewBox="0 0 19 32" fill="none">
+							<path d="M9.50049 15.9886C13.9156 15.9886 17.4948 12.4094 17.4948 7.99427C17.4948 3.57916 13.9156 0 9.50049 0C5.08532 0 1.50616 3.57916 1.50616 7.99427C1.50616 12.4094 5.08532 15.9886 9.50049 15.9886ZM9.50049 4.0614C11.6726 4.0614 13.4334 5.82215 13.4334 7.99427C13.4334 10.1664 11.6726 11.9272 9.50049 11.9272C7.32831 11.9272 5.56756 10.1664 5.56756 7.99427C5.56756 5.82261 7.32831 4.0614 9.50049 4.0614ZM18.7152 16.9639C18.2637 16.0571 17.014 15.3028 15.3524 16.612C13.107 18.3813 9.49997 18.3813 9.49997 18.3813C9.49997 18.3813 5.89296 18.3813 3.64761 16.612C1.9865 15.3028 0.736308 16.0571 0.284793 16.9639C-0.502058 18.5447 0.386788 19.3085 2.39317 20.5964C4.10671 21.6964 6.46117 22.1073 7.98198 22.2613L6.71289 23.5304C4.9252 25.3181 3.19943 27.0439 2.00212 28.2412C1.28609 28.9567 1.28609 30.1177 2.00212 30.8337L2.21795 31.0495C2.93399 31.7656 4.09442 31.7651 4.81046 31.0495L9.52128 26.3388C11.309 28.1265 13.0347 29.8522 14.232 31.0495C14.9476 31.7656 16.1085 31.7656 16.8246 31.0495L17.0404 30.8337C17.7564 30.1177 17.756 28.9572 17.0404 28.2412L12.3296 23.5304L11.0563 22.2576C12.5781 22.1007 14.9075 21.6879 16.6068 20.5969C18.6132 19.3089 19.5021 18.5447 18.7152 16.9639Z"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg viewBox="0 0 36 30" fill="none">
+							<path d="M34.5176 0.507812C34.8411 0.536029 35.0847 0.637858 35.2422 0.823242C35.3987 1.00757 35.5478 1.366 35.4854 2.07617L35.4844 2.08398C35.4401 2.70575 35.2143 4.13613 34.9111 6.06543C34.6105 7.97829 34.2397 10.3495 33.915 12.8145L31.6963 27.3672L31.6943 27.3828L31.6924 27.3975V27.3994C31.6922 27.4014 31.692 27.405 31.6914 27.4102C31.6901 27.4215 31.688 27.4403 31.6846 27.4648C31.6776 27.5142 31.6655 27.5882 31.6465 27.6787C31.608 27.8611 31.5423 28.1046 31.4326 28.3545C31.2098 28.8622 30.8438 29.3225 30.2314 29.459C29.5738 29.6053 28.6672 29.3491 27.7891 28.9375C26.935 28.5371 26.229 28.0477 26.0283 27.8867L26.0225 27.8818L26.0156 27.877C25.9057 27.7944 25.4015 27.4653 24.7139 27.0137C24.0105 26.5517 23.0838 25.9423 22.0977 25.2773C20.115 23.9404 17.9226 22.4042 16.7949 21.4092L16.79 21.4053L16.6855 21.3096C16.4468 21.0794 16.2543 20.7975 16.207 20.5C16.1601 20.2045 16.2371 19.7613 16.8867 19.1914L16.9023 19.1777L26.6152 9.90234H26.6162L26.624 9.89355C26.9351 9.58165 27.2426 9.17123 27.4541 8.77637C27.5598 8.57914 27.6509 8.36896 27.7021 8.16504C27.7499 7.97465 27.781 7.71716 27.6807 7.47266C27.5598 7.17842 27.3004 7.02041 27.0137 6.98438C26.7606 6.95261 26.4777 7.0105 26.1855 7.11133C25.5915 7.31636 24.7482 7.77585 23.583 8.57031L10.6426 17.375C10.6364 17.3785 10.6272 17.3835 10.6152 17.3896C10.5822 17.4067 10.5273 17.433 10.4512 17.4639C10.2989 17.5257 10.0606 17.6059 9.73926 17.6631C9.09997 17.7767 8.11773 17.803 6.80859 17.4102L0.869141 15.5791C0.866732 15.5773 0.863889 15.5752 0.861328 15.5732C0.822417 15.5435 0.769717 15.4994 0.71582 15.4443C0.598838 15.3248 0.521289 15.199 0.503906 15.0869C0.49208 15.0105 0.493051 14.8591 0.726562 14.625C0.977643 14.3733 1.47232 14.0566 2.39062 13.7197L2.41113 13.7119L2.43164 13.7031C10.5135 9.89447 20.2185 6.01593 29.2832 2.30566L33.1123 0.730469C33.113 0.730194 33.1145 0.730124 33.1162 0.729492C33.1204 0.727909 33.1279 0.7252 33.1377 0.72168C33.1575 0.714563 33.1879 0.70328 33.2275 0.69043C33.3075 0.6645 33.4233 0.630178 33.5615 0.597656C33.8439 0.531208 34.1932 0.47957 34.5176 0.507812ZM0.913086 15.6104H0.912109H0.913086Z" stroke="#C0C6E0"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg viewBox="0 0 36 36" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M18.3868 35.8973C14.8538 35.8973 13.212 35.3793 10.3581 33.3073C8.55298 35.6383 2.83667 37.4599 2.58738 34.3433C2.58738 32.0037 2.07163 30.0266 1.4871 27.8683C0.790829 25.2092 0 22.248 0 17.9573C0 7.70954 8.37247 0 18.2922 0C28.2205 0 35.9999 8.0894 35.9999 18.0522C36.0332 27.861 28.153 35.8449 18.3868 35.8973ZM18.5329 8.85777C13.702 8.6074 9.93693 11.9658 9.10312 17.2321C8.41545 21.5919 9.63607 26.9014 10.6762 27.1776C11.1748 27.2985 12.4298 26.2798 13.212 25.4941C14.5055 26.3916 16.0117 26.9306 17.5787 27.0568C22.5844 27.2986 26.8615 23.4712 27.1976 18.4494C27.3933 13.4169 23.5392 9.15439 18.5329 8.8664L18.5329 8.85777Z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="close">
+				<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line x1="0.706956" y1="24.707" x2="24.707" y2="0.706957" stroke="white" stroke-width="2"/>
+					<line x1="2.12117" y1="0.706956" x2="26.1212" y2="24.707" stroke="white" stroke-width="2"/>
+				</svg>
+			</div>
+		</div>
+		<div class="overlay"></div>
+		<script src="./assets/js/fancybox.umd.js"></script>
+		<script src="./assets/js/swiper-bundle.min.js"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
