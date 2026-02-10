@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		loop: true,
 		speed: 1200,
 		pagination: false,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 1,
+			loadOnTransitionStart: true
+		},
 		navigation: {
 			nextEl: '.news .slider__next',
 			prevEl: '.news .slider__prev',
@@ -34,9 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const videoSlider = new Swiper(".video__list", {
 		slidesPerView: 3,
 		slidesPerGroup: 1,
-		loop: true,
+		loop: false,
 		speed: 1200,
-		lazy: false,
 		pagination: false,
 		navigation: {
 			nextEl: '.video .slider__next',
@@ -51,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			delay: 5000,
 			disableOnInteraction: false,
 		},
-		spaceBetween: 31,
+		spaceBetween: 30,
 		breakpoints: {
 		   0: {
 			   slidesPerView: 'auto',
@@ -66,6 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	const gallerySlider = new Swiper(".gallery__list", {
 		slidesPerView: 2,
 		slidesPerGroup: 1,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 1,
+			loadOnTransitionStart: true
+		},
 		loop: false,
 		speed: 1200,
 		lazy: false,
