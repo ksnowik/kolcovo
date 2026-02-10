@@ -18,7 +18,13 @@
 						<label for="search">
 							<input id="search" type="text" placeholder="Введите запрос">
 						</label>
-						<input type="submit" class="btn btn-color" value="Найти">
+						<button type="submit" class="btn btn-color" value="Найти">
+							<span class="only-desktop">Найти</span>
+							
+							<svg class="only-mobile" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M2.1967 2.1967C3.60322 0.790176 5.51088 0 7.5 0C9.48912 0 11.3968 0.790176 12.8033 2.1967C14.2098 3.60322 15 5.51088 15 7.5C15 9.15278 14.4545 10.7493 13.4631 12.0489L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L12.0489 13.4631C10.7493 14.4545 9.15278 15 7.5 15C5.51088 15 3.60322 14.2098 2.1967 12.8033C0.790176 11.3968 0 9.48912 0 7.5C0 5.51088 0.790176 3.60322 2.1967 2.1967ZM7.5 2C6.04131 2 4.64236 2.57946 3.61091 3.61091C2.57946 4.64236 2 6.04131 2 7.5C2 8.95869 2.57946 10.3576 3.61091 11.3891C4.64236 12.4205 6.04131 13 7.5 13C8.95869 13 10.3576 12.4205 11.3891 11.3891C12.4205 10.3576 13 8.95869 13 7.5C13 6.04131 12.4205 4.64236 11.3891 3.61091C10.3576 2.57946 8.95869 2 7.5 2Z" fill="white"/>
+							</svg>
+						</button>
 					</div>
 				</form>
 
@@ -193,6 +199,45 @@
 						</div>
 						<div class="news__slider swiper">
 							<div class="swiper-wrapper">
+								<div class="swiper-slide only-mobile">
+									<div class="news__item">
+										<div class="news__item-img">
+											<a href="#"><img src="./assets/images/news_1.png" alt="Новость 1"></a>
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide only-mobile">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_6.png" alt="Новость 2">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide only-mobile">
+									<div class="news__item">
+										<div class="news__item-img">
+											<img src="./assets/images/news_3.png" alt="Новость 3">
+										</div>
+										<div class="news__item-content">
+											<div class="news__item-title"><a href="#">45 одаренных детей из Кольцово получат муниципальные стипендии</a></div>
+											<div class="news__item-date only-mobile">
+												5 декабря 2025 г
+											</div>
+										</div>
+									</div>
+								</div>
 								<div class="swiper-slide">
 									<div class="news__item">
 										<div class="news__item-img">
@@ -720,7 +765,7 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__contacts">
-					<div class="footer__contacts-item">
+					<div class="footer__contacts-item call">
 						<div class="footer__contacts-title">
 							Звоните:
 						</div>
@@ -730,7 +775,7 @@
 						</div>
 					</div>
 					
-					<div class="footer__contacts-item">
+					<div class="footer__contacts-item sms">
 						<div class="footer__contacts-title">
 							SMS-сообщения:
 						</div>
@@ -738,7 +783,7 @@
 							<a href="tel:89130001783">8 (913) 000-17-83 </a>
 						</div>
 					</div>
-					<div class="footer__contacts-item">
+					<div class="footer__contacts-item address">
 						<div class="footer__contacts-title">
 							Адрес:
 						</div>
@@ -746,7 +791,7 @@
 							630559, Новосибирская область, р. п. Кольцово, Никольский пр-т, 1, офис 400
 						</div>
 					</div>
-					<div class="footer__contacts-item">
+					<div class="footer__contacts-item write">
 						<div class="footer__contacts-title">
 							Пишите:
 						</div>
