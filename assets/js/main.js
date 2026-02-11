@@ -39,9 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	const videoSlider = new Swiper(".video__list", {
 		slidesPerView: 3,
 		slidesPerGroup: 1,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 1,
+			loadOnTransitionStart: true
+		},
 		loop: false,
 		speed: 1200,
-		pagination: false,
+		lazy: false,
+		initialSlide: 4,
+		preloadImages: false,
+		keyboard: true,
 		navigation: {
 			nextEl: '.video .slider__next',
 			prevEl: '.video .slider__prev',
