@@ -28,10 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		   0: {
 			   centeredSlides: true,
 			   slidesPerView: 'auto',
+			   spaceBetween: 16,
 		   },
-		   767: {
+		   768: {
 			   slidesPerView: 3,
 			   centeredSlides: false,
+			   spaceBetween: 31,
 		   },
 		}
 	});
@@ -69,8 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			   slidesPerView: 'auto',
 			   spaceBetween: 16,
 		   },
-		   767: {
+		   768: {
 			   slidesPerView: 3,
+			   spaceBetween: 31,
 		   },
 		}
 	});
@@ -105,8 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			   slidesPerView: 'auto',
 			   spaceBetween: 16,
 		   },
-		   767: {
+		   768: {
 			   slidesPerView: 2,
+			   spaceBetween: 31
 		   },
 		}
 	});

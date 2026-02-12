@@ -216,7 +216,7 @@ body {
     padding: 0 35px;
 }
 
-@media(max-width: 576px) {
+@media(max-width: 767px) {
 	.container {
 		padding: 0 15px;
 	}
@@ -282,6 +282,7 @@ img {
 	.only-desktop {
 		display: none!important;
 	}
+
 	.only-mobile {
 		display: flex!important;
 	}
@@ -742,7 +743,7 @@ header.header a {
 	}
 
 	.header__title {
-        line-height: 10px;
+        line-height: 30px;
 	}
 
 	.header__bottom {
@@ -865,7 +866,7 @@ header.header a {
 	}
 }
 
-@media(max-width: 576px) {
+@media(max-width: 767px) {
 	.news__list {
 		display: none;
 	}
@@ -950,17 +951,20 @@ header.header a {
 }
 
 @media(max-width: 767px) {
-	.useful__item {
-		width: 100%;
-	}
-
 	.useful__item a {
 		min-height: 72px;
 		padding: 10px 26px;
+		font-size: 14px;
 	}
 
 	.useful__item a img {
 		max-height: 80%;
+	}
+}
+
+@media(max-width: 576px) {
+	.useful__item {
+		width: 100%;
 	}
 }
 
@@ -1275,6 +1279,10 @@ header.header a {
 	display: none;
 }
 
+.footer__menu-item.social {
+	display: none;
+}
+
 @media(max-width: 767px) {
 	.footer__links .section__body {
 		flex-direction: column;
@@ -1311,7 +1319,7 @@ header.header a {
 	}
 
 	.footer__menu-item {
-		 width: calc(1/2*100% - (1 - 1/2)*30px);
+		 width: calc(1/3*100% - (1 - 1/3)*30px);
 	}
 
 	.footer__menu-item:nth-child(3) {
@@ -1324,11 +1332,20 @@ header.header a {
 
 	.footer__menu-item.social {
 		order: 99;
+		display: flex;
+	}
+
+	.footer__links .section__body {
+		position: relative;
 	}
 
 	.footer__menu-item.social {
 		align-items: flex-end;
 		gap: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: fit-content;
 	}
 
 	.footer__menu-item.social svg {
@@ -1337,6 +1354,19 @@ header.header a {
 
 	.footer__menu-item.social svg path {
 		fill: #C0C6E0;
+	}
+}
+
+@media(max-width: 576px) {
+	.footer__menu-item {
+		width: calc(1/2*100% - (1 - 1/2)*30px);
+	}
+
+	.footer__menu-item.social {
+		position: relative;
+		top: auto;
+		right: auto;
+		width: calc(1/2*100% - (1 - 1/2)*30px);
 	}
 }
 
@@ -1467,6 +1497,7 @@ header.header a {
 	gap: 30px;
 	align-items: center;
 	color: var(--color-blue);
+	white-space: nowrap;
 }
 
 #vision {
@@ -1477,6 +1508,7 @@ header.header a {
 	stroke: var(--color-blue);
 	transform: scale(1.35);
 }
+
 @media(min-width: 768px) and (max-width: 991px) {
 	.footer__contacts {
 		display: flex;
@@ -1508,13 +1540,13 @@ header.header a {
 
 	.footer__contacts-item:nth-child(3) {
 		grid-column: auto;
-		grid-column-start: 1;
-		grid-row-start: 3;
+		grid-column-start: 2;
+		grid-row-start: 1;
 	}
 
 	.footer__contacts-item:nth-child(4) {
-		grid-row-start: 1;
-		grid-row-start: 4;
+		grid-row-start: 2;
+		grid-row-start: 2;
 	}
 
 	.footer__contacts-item.social {
@@ -1522,7 +1554,7 @@ header.header a {
 	}
 
 	.footer__bottom-right p:not(:last-child) {
-		margin-bottom: 22px;
+		margin-bottom: 16px;
 	}
 
 	.footer__contacts {
@@ -1554,18 +1586,62 @@ header.header a {
 	.footer__bottom {
 		font-size: 14px;
 		line-height: 17px;
-		flex-direction: column;
 		text-align: left;
 		align-items: flex-start;
-		gap: 40px;
-		padding: 24px 0 51px;
+		gap: 16px;
+		padding: 24px 0 28px;
+	}
+
+	.footer__bottom-left,
+	.footer__bottom-right {
+		width: calc(1/2*100% - (1 - 1/2)*8px);
+	}
+
+	.footer__contacts {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
 @media(max-width: 576px) {
+	.footer__bottom-left,
+	.footer__bottom-right {
+		width: 100%;
+	}
+
+	.footer__bottom {
+		flex-direction: column;
+		padding: 24px 0 51px;
+	}
+
+	.footer__bottom-right p:not(:last-child) {
+		margin-bottom: 22px;
+	}
+
+	.footer__contacts-item:nth-child(1) {
+		grid-column-start: 1;
+		grid-row-start: 1;
+	}
+
+	.footer__contacts-item:nth-child(2) {
+		grid-column-start: 1;
+		grid-row-start: 2;
+	}
+
+	.footer__contacts-item:nth-child(3) {
+		grid-column: auto;
+		grid-column-start: 1;
+		grid-row-start: 3;
+	}
+
+	.footer__contacts-item:nth-child(4) {
+		grid-row-start: 1;
+		grid-row-start: 4;
+	}
+
 	.footer__contacts {
         display: flex;
         flex-direction: column;
+		grid-template-columns: auto;
     }
 
 	.footer__contacts-title, .footer__contacts-text {
