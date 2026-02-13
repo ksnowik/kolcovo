@@ -1178,6 +1178,7 @@ header.header a {
 	.facts__list {
 		position: relative;
 		gap: 24px;
+		align-items: flex-start;
 	}
 
 	.facts__list:after {
