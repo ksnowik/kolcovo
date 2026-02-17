@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const newsSlider = new Swiper(".news__slider", {
 		slidesPerView: 3,
 		slidesPerGroup: 1,
-		loop: true,
+		loop: false,
 		speed: 1200,
 		pagination: false,
 		lazy: {
@@ -179,5 +179,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	searchButtonClose.addEventListener('click', function(event) {
 		document.querySelector('.search__panel').classList.remove("active");
+	});
+
+	const items = document.querySelectorAll('.useful__item');
+    const button = document.getElementById('loadMore');
+	const limit = 4;
+
+	// Скрываем элементы с индексами 4 и выше
+	items.forEach((item, index) => {
+		if (index >= limit) {
+		item.classList.add('hidden');
+		}
+	});
+
+	// Логика кнопки
+	button.addEventListener('click', () => {
+		items.forEach(item => {
+		item.classList.remove('hidden'); // Показываем все
+		});
+		button.style.display = 'none'; // Скрываем кнопку
 	});
 });

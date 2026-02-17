@@ -962,9 +962,29 @@ header.header a {
 	}
 }
 
+.useful__more {
+	display: none;
+}
+
 @media(max-width: 576px) {
 	.useful__item {
 		width: 100%;
+	}
+
+	.useful__more {
+		display: block;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #105980;
+		display: flex;
+		gap: 5px;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	.useful__item.hidden {
+		display: none;
 	}
 }
 
@@ -1008,6 +1028,14 @@ header.header a {
 	font-size: 18px;
 	line-height: 20px;
 	margin-top: 25px;
+}
+
+.video__item-title a {
+	color: inherit;
+}
+
+.video__item-title a:hover {
+	color: var(--color-accent);
 }
 
 .video .slider__next,
