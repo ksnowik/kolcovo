@@ -38,6 +38,31 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
+	const eventSlider = new Swiper(".event__calendar-slider", {
+		slidesPerView: 'auto',
+		slidesPerGroup: 1,
+		loop: false,
+		speed: 1200,
+		pagination: false,
+		navigation: {
+			nextEl: '.event__calendar .slider__next',
+			prevEl: '.event__calendar .slider__prev',
+		},
+		freeMode: false,
+		autoplay: false,
+		spaceBetween: 74,
+		breakpoints: {
+		   0: {
+			   freeMode: {
+					enabled: true,       // Включает режим свободного скролла
+					sticky: false,       // Отключает прилипание к слайдам
+					momentum: true,      // Добавляет инерцию после отпускания
+					momentumVelocityRatio: 1, // Скорость инерции
+				},
+		   },
+		}
+	});
+
 	const videoSlider = new Swiper(".video__list", {
 		slidesPerView: 3,
 		slidesPerGroup: 1,
@@ -161,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	document.addEventListener('click', (event) => {
-		if (!menu.contains(event.target) && !burgerButton.contains(event.target)) {
+		if (menu.classList.contains('active') && !menu.contains(event.target) && !burgerButton.contains(event.target)) {
 			removeMenu();
 		}
 	});
@@ -181,22 +206,75 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector('.search__panel').classList.remove("active");
 	});
 
-	const items = document.querySelectorAll('.useful__item');
-    const button = document.getElementById('loadMore');
-	const limit = 4;
+	// PopUps
+
+	const popupButtonOpen = document.querySelectorAll('a[data-modal]');
+	if(popupButtonOpen) {
+		const popupWindow = document.querySelector('.popup');
+		const popupButtonClose = document.querySelector('.popup .close');
+		const overlay = document.querySelector('.overlay');
+		const body = document.querySelector('body');
+
+		function showPopup() {
+			popupWindow.classList.add('show');
+			overlay.classList.add('active');
+			body.classList.add('fixed');
+		}
+		
+		function removePopup() {
+			popupWindow.classList.remove('show');
+			overlay.classList.remove('active');
+			body.classList.remove('fixed');
+		}
+
+		popupButtonOpen.forEach(item => {
+			item.addEventListener('click', function(event) {
+				event.preventDefault();
+				showPopup();
+			});
+
+		});
+
+		popupButtonClose.addEventListener('click', function(event) {
+			event.preventDefault();
+			removePopup();
+		});
+
+		document.addEventListener('click', (event) => {
+			if (!popupWindow.contains(event.target) && !popupButtonOpen.contains(event.target)) {
+				removePopup();
+			}
+		});
+	}
 
 	// Скрываем элементы с индексами 4 и выше
-	items.forEach((item, index) => {
-		if (index >= limit) {
-		item.classList.add('hidden');
-		}
-	});
 
-	// Логика кнопки
-	button.addEventListener('click', () => {
-		items.forEach(item => {
-		item.classList.remove('hidden'); // Показываем все
+	const button = document.getElementById('loadMore');
+
+	if(button) {
+		const limit = 4;
+		const items = document.querySelectorAll('.useful__item');
+
+		items.forEach((item, index) => {
+			if (index >= limit) {
+			item.classList.add('hidden');
+			}
 		});
-		button.style.display = 'none'; // Скрываем кнопку
+
+		button.addEventListener('click', () => {
+			items.forEach(item => {
+			item.classList.remove('hidden'); // Показываем все
+			});
+			button.style.display = 'none'; // Скрываем кнопку
+		});
+	}
+
+	// Логика спойлер-списка
+
+	const liHasChildren = document.querySelectorAll('.has-children span');
+	liHasChildren.forEach((item, index) => {
+		item.addEventListener('click', () => {
+			item.parentElement.classList.toggle('active');
+		});
 	});
 });
