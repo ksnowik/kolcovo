@@ -304,3 +304,38 @@ var main = new Splide( '#main-slider', {
   main.mount();
   thumbnails.mount();
 } );
+
+$( function() {
+	$( ".datepicker" ).datepicker({
+		dateFormat: 'dd.mm.yy',
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+		'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		firstDay: 1 // Понедельник
+	});
+} );
+
+$( document ).ready(function() {
+	$('.news__filter .open__filter').on('click', function() {
+		$('.filter-list').toggleClass('active');
+		$('.news__filter .reset__filter').toggleClass('active');
+		if($(this).children('span').html() == 'Расширенный поиск') {
+			$(this).children('span').html('Скрыть фильтр');
+		} else {
+			$(this).children('span').html('Расширенный поиск');
+		}
+	})
+
+	$('.filter-list__item input').on('click', function() {
+		if ($('#period').is(':checked')) {
+            $('.filter-list__calendar').addClass('active');
+        } else {
+			$('.filter-list__calendar').removeClass('active');
+		}
+	});
+
+	$('.reset__filter').on('click', function() {
+		$('.filter-list input[type="radio"]').prop('checked', false);
+		$('.filter-list__calendar').removeClass('active');
+	});
+});

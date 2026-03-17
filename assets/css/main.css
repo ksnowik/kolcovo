@@ -2242,6 +2242,12 @@ header.header a {
 
 .news__filter {
 	display: flex;
+	gap: 25px;
+}
+
+.news__filter .open__filter,
+.news__filter .reset__filter {
+	display: flex;
 	gap: 12px;
 	align-items: center;
 	font-weight: 500;
@@ -2250,6 +2256,15 @@ header.header a {
 	letter-spacing: 0.07em;
 	cursor: pointer;
 	margin-bottom: 32px;
+}
+
+.news__filter .reset__filter {
+	color: #BF0000;
+	display: none;
+}
+
+.news__filter .reset__filter.active {
+	display: flex;
 }
 
 .news__search {
@@ -2706,4 +2721,206 @@ header.header a {
 .splide__list .splide__slide {
     display: flex;
     justify-content: flex-start;
+}
+
+.filter-list {
+	max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+	overflow: hidden;
+	flex-wrap: wrap;
+}
+
+.filter-list.active {
+	max-height: 500px;
+	transition: max-height 0.3s ease-in-out;
+}
+
+/* Hide the default radio input */
+.filter-list input[type="radio"] {
+  /* appearance: none; */ /* Modern alternative to opacity/position tricks */
+  opacity: 0;
+  position: absolute;
+}
+
+/* Style the label to look like an empty radio button */
+.filter-list label.radio {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 30px; /* Make room for the custom indicator */
+  position: relative;
+}
+
+.filter-list label.radio::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #9D9E9E;
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #fff;
+}
+
+/* Style the indicator when the input is checked */
+.filter-list input[type="radio"]:checked + label.radio::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-white); /* Inner circle color */
+  border-radius: 50%;
+}
+
+.filter-list input[type="radio"]:checked + label.radio::before {
+	border-color: var(--base-blue);
+	background-color: var(--base-blue);
+}
+
+.filter-list label:hover::before {
+	border-color: var(--base-blue);
+}
+
+.filter-list input[type="radio"]:focus + label.radio::before {
+  outline: 0; /* Ensure keyboard users can see focus */
+}
+
+.filter-list {
+	display: flex;
+	column-gap: 49px;
+	row-gap: 0;
+	align-items: flex-start;
+}
+
+.filter-list__item {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(25, 28, 48, 0.9);
+}
+
+.filter-list.active {
+	margin-bottom: 24px;
+}
+
+.datepicker {
+	background-color: var(--color-white);
+	background-image: url('../images/calendar-2.svg');
+	background-position: right 8px center;
+	background-repeat: no-repeat;
+	height: 48px;
+	border: 1px solid #9D9E9E;
+	border-radius: 8px;
+	padding: 0 24px 0 12px
+}
+
+.datepicker::placeholder {
+  color: #9D9E9E;
+}
+
+.datepicker::-webkit-input-placeholder {
+  color: #9D9E9E;
+}
+
+.datepicker::-moz-placeholder {
+  color: #9D9E9E;
+  opacity: 1;
+}
+
+.datepicker:-ms-input-placeholder {
+  color: #9D9E9E;
+}
+
+.filter-list__calendar {
+	display: none;
+}
+
+.filter-list__calendar.active {
+	display: flex;
+	gap: 29px;
+}
+
+.filter-calendar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.ui-widget.ui-widget-content {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.ui-datepicker th {
+	padding: 0;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	color: rgba(27, 31, 59, 0.4);
+}
+
+.ui-datepicker-year {
+	color: var(--base-blue);
+}
+
+.ui-datepicker .ui-datepicker-title {
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 28px;
+	color: rgba(25, 28, 48, 0.9);
+}
+
+.ui-widget-header {
+	background: transparent;
+	border: 0;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	border: 0;
+	background: transparent;
+	text-align: center;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {
+	background: var(--base-blue);
+	color: var(--color-white);
+	border: 0;
+}
+
+.ui-datepicker-week-end a.ui-state-default {
+	color: #DD4C1E;
+}
+
+.ui-datepicker-prev .ui-icon {
+	content: url('../images/mini-arrow_left.svg');
+}
+
+.ui-datepicker-next .ui-icon {
+	content: url('../images/mini-arrow_right.svg');
+}
+
+.filter-list__title {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0.07em;
+	margin-bottom: 24px;
+	width: 100%;
+}
+
+@media(max-width: 576px) {
+	.filter-list {
+		gap: 24px;
+		flex-direction: column;
+	}
+
+	.filter-list__title {
+		margin-bottom: 0;
+	}
 }
