@@ -7,6 +7,7 @@
 		<meta name="robots" content="noindex" />
 		<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 		<link rel="stylesheet" href="./assets/css/fancybox.css">
+		<link rel="stylesheet" href="./assets/css/splide.min.css">
 		<link rel="stylesheet" href="./assets/css/main.css">
 		
 	</head>
@@ -36,27 +37,17 @@
 				</div>
 			</div>
 		</div>
-		<header class="header">
+		<header class="header inner-page">
 			<div class="container">
 				<div class="header__top">
 					<div class="header__logo">
 						<a href="/"><img src="./assets/images/logo.svg" alt="logo"></a>
-						<div class="text only-mobile">
-							Наукоград<br>Кольцово
+						<div class="text">
+							Наукоград <span>Кольцово</span>
 						</div>
 					</div>
 					<div class="header__info">
 						<div class="header__info-top">
-							<div class="header__weather">
-								<div class="header__weather-item">
-									Cегодня: -17°c
-									<svg width="20" height="20"><use xlink:href="./assets/images/sprite.svg#sun"></use></svg>
-								</div>
-								<div class="header__weather-item">
-									Завтра: -10°c
-									<svg width="20" height="20"><use xlink:href="./assets/images/sprite.svg#sun"></use></svg>
-								</div>
-							</div>
 							<div class="header__links">
 								<div class="header__links-item">
 									<a href="#">
@@ -152,6 +143,68 @@
 			<section class="section container page news-detail">
 				<h1>В наукограде прошла акция «День здоровья»</h1>
 				<div class="news-detail__body">
+					<div class="detail__slider">
+						<div id="main-slider" class="splide">
+							<div class="splide__track">
+								<ul class="splide__list">
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1__full.png">
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div id="thumbnail-slider" class="splide">
+							<div class="splide__track">
+								<ul class="splide__list">
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider2.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider3.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider4.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider1.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider2.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider3.png">
+									</li>
+									<li class="splide__slide">
+										<img src="./assets/images/news-detail-slider4.png">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 					<p>4 декабря в Кольцово в рамках Декады инвалидов состоялась акция «День здоровья».</p>
 					<p>На базе Молодежного центра желающие могли пройти диагностику здоровья, направленную на раннее выявление заболеваний. Врачи осматривали пациентов с большой заботой и вниманием.</p>
 					<p>Участники акции прошли комплексное обследование: измерили давление, рост, вес, сдали анализы крови, сделали электрокардиограмму, получили консультации терапевта, кардиолога, эндокринолога, дерматолога и сурдолога.</p>
@@ -382,6 +435,7 @@
 		<div class="overlay"></div>
 		<script src="./assets/js/fancybox.umd.js"></script>
 		<script src="./assets/js/swiper-bundle.min.js"></script>
+		<script src="./assets/js/splide.js"></script>
 		<script src="./assets/js/main.js"></script>
 	</body>
 </html>

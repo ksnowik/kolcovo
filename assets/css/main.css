@@ -388,13 +388,37 @@ header.header a {
 	flex-direction: column;
 }
 
+.inner-page .header__info {
+	width: calc(100% - 215px);
+}
+
 .header__logo {
 	display: flex;
 	font-weight: 700;
-	font-size: 18px;
-	line-height: 20px;
 	align-items: center;
 	gap: 7px;
+}
+
+.header__logo .text {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.inner-page .header__logo .text {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+.inner-page .header__logo .text span {
+	text-transform: uppercase;
+	display: block;
+}
+
+@media(max-width: 576px) {
+	.inner-page .header__logo .text span {
+		text-transform: none;
+	}
 }
 
 .header__info-top {
@@ -408,6 +432,10 @@ header.header a {
     display: flex;
     gap: 35px;
 	margin-bottom: 40px;
+}
+
+.inner-page .header__top {
+	margin-bottom: 0;
 }
 
 .header__weather {
@@ -458,6 +486,10 @@ header.header a {
 	margin: -8px;
 }
 
+.inner-page .header__nav ul {
+	margin: -8px -8px 0 -8px;
+}
+
 .header__nav .sub-menu {
 	display: none;
 }
@@ -470,6 +502,11 @@ header.header a {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 30px;
+}
+
+.inner-page .header__nav ul li {
+	font-size: 22px;
+	line-height: 28px;
 }
 
 .header__nav>ul>li {
@@ -2583,4 +2620,90 @@ header.header a {
 		font-size: 16px;
 		line-height: 20px;
 	}
+}
+
+.detail__slider {
+	width: 100%;
+	display: flex;
+}
+
+.splide__slide {
+  opacity: 0.3;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+
+#main-slider {
+	margin-bottom: 15px;
+}
+
+.splide {
+	position: relative;
+}
+
+.splide img {
+	border-radius: 10px;
+	max-width: 100%;
+	height: auto;
+}
+
+#thumbnail-slider.splide li {
+	width: 190px;
+}
+
+.splide__track--nav>.splide__list>.splide__slide {
+	border: 0;
+	border-radius: 0;
+}
+
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+	border: 0;
+}
+
+.splide__slide {
+	opacity: 0.8;
+}
+
+.splide__arrow {
+	width: 80px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    transform: none;
+}
+
+.splide__arrow:focus {
+	outline: none;
+	border-radius: 10px;
+	background: inherit;
+}
+
+.splide__arrows--ttb .splide__arrow--prev {
+	bottom: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	transform: none;
+	height: auto;
+}
+
+.splide__arrows--ttb .splide__arrow--next {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: auto;
+	transform: none;
+	height: auto;
+}
+
+.splide__arrow svg {
+	fill: var(--color-white);
+}
+
+.splide__list .splide__slide {
+    display: flex;
+    justify-content: flex-start;
 }

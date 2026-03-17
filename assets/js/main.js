@@ -209,8 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	// PopUps
 
 	const popupButtonOpen = document.querySelectorAll('a[data-modal]');
-	if(popupButtonOpen) {
-		const popupWindow = document.querySelector('.popup');
+	const popupWindow = document.querySelector('.popup');
+	if(popupWindow) {
 		const popupButtonClose = document.querySelector('.popup .close');
 		const overlay = document.querySelector('.overlay');
 		const body = document.querySelector('body');
@@ -278,3 +278,29 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+document.addEventListener( 'DOMContentLoaded', function () {
+var main = new Splide( '#main-slider', {
+    type      : 'fade',
+    rewind    : true,
+    pagination: false,
+    arrows    : false,
+  } );
+
+  var thumbnails = new Splide( '#thumbnail-slider', {
+    fixedWidth  : 190,
+    fixedHeight : 127,
+    gap         : 20,
+    pagination  : false,
+    cover       : true,
+    isNavigation: true,
+	type: 'loop', 
+	direction: "ttb",
+	heightRatio: 0.67,
+	perPage: 5,
+  } );
+
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
+} );
