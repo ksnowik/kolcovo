@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			const toggleBtn = event.target.closest('.item-has-children');
 
-			console.log('test');
 			event.preventDefault();
 			toggleBtn.classList.toggle("active");
 		});
@@ -279,40 +278,45 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-document.addEventListener( 'DOMContentLoaded', function () {
-var main = new Splide( '#main-slider', {
-    type      : 'fade',
-    rewind    : true,
-    pagination: false,
-    arrows    : false,
-  } );
+if(document.querySelector('#main-slider')) {
+	document.addEventListener( 'DOMContentLoaded', function () {
+	var main = new Splide( '#main-slider', {
+		type      : 'fade',
+		rewind    : true,
+		pagination: false,
+		arrows    : false,
+	} );
 
-  var thumbnails = new Splide( '#thumbnail-slider', {
-    fixedWidth  : 190,
-    fixedHeight : 127,
-    gap         : 20,
-    pagination  : false,
-    cover       : true,
-    isNavigation: true,
-	type: 'loop', 
-	direction: "ttb",
-	heightRatio: 0.67,
-	perPage: 5,
-  } );
+	var thumbnails = new Splide( '#thumbnail-slider', {
+		fixedWidth  : 190,
+		fixedHeight : 127,
+		gap         : 20,
+		pagination  : false,
+		cover       : true,
+		isNavigation: true,
+		type: 'loop', 
+		direction: "ttb",
+		heightRatio: 0.67,
+		perPage: 5,
+	} );
 
-  main.sync( thumbnails );
-  main.mount();
-  thumbnails.mount();
-} );
+	main.sync( thumbnails );
+	main.mount();
+	thumbnails.mount();
+	} );
+}
+
 
 $( function() {
-	$( ".datepicker" ).datepicker({
-		dateFormat: 'dd.mm.yy',
-		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-		'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-		firstDay: 1 // Понедельник
-	});
+	if($( ".datepicker" ).length) {
+		$( ".datepicker" ).datepicker({
+			dateFormat: 'dd.mm.yy',
+			monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+			'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+			dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+			firstDay: 1 // Понедельник
+		});
+	}
 } );
 
 $( document ).ready(function() {
@@ -338,4 +342,42 @@ $( document ).ready(function() {
 		$('.filter-list input[type="radio"]').prop('checked', false);
 		$('.filter-list__calendar').removeClass('active');
 	});
+
+	$('.header__nav>ul>.item-has-children>.sub-menu').each(function() {
+		$(this).wrapAll('<div class="sub-menu__wrapper"></div>');
+	});
+
+	$('.sub-menu__wrapper').each(function() {
+		$(this).append('<div class="column"><div class="column__inner"></div></div>');
+
+
+		$(this).children('.sub-menu').each(function() {
+			// Считаем родителей <ul> для каждого <ul>
+			if($(this).find('.sub-menu').length == 0) {
+				$(this).parents('.sub-menu__wrapper').addClass('one-column');
+				console.log('no');
+			} else {
+				console.log('yes li');
+			}
+		});
+	});
+
+	$('.header__nav > ul > .item-has-children a').hover(
+		function() {
+			$('.column__inner').html('');
+        },
+	);
+	
+	$('.header__nav ul .item-has-children .sub-menu li').hover(
+        function() {
+			$('.column__inner').html('');
+            var content = $(this).find('.sub-menu').clone();
+			if(content.length) {
+				$('.column__inner').html(content.show());
+			} else {
+				$('.column__inner').html('');
+			}
+
+        },
+    );
 });
