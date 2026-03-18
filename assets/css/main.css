@@ -412,12 +412,20 @@ header.header a {
 .header__logo .text {
 	font-size: 18px;
 	line-height: 20px;
+	flex-direction: column;
 }
 
 .inner-page .header__logo .text {
 	font-weight: 700;
 	font-size: 28px;
 	line-height: 34px;
+}
+
+@media(max-width: 1199px) {
+	.inner-page .header__logo .text {
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 
 .inner-page .header__logo .text span {
@@ -428,6 +436,10 @@ header.header a {
 @media(max-width: 576px) {
 	.inner-page .header__logo .text span {
 		text-transform: none;
+	}
+
+	.inner-page .header__info {
+		display: none;
 	}
 }
 
@@ -721,7 +733,7 @@ header.header a {
 	}
 }
 
-@media(min-width: 768px) and (max-width: 991px) {
+@media(min-width: 768px) and (max-width: 1199px) {
 	.header__info-top {
 		flex-wrap: wrap;
 		gap: 20px;
@@ -2049,6 +2061,7 @@ header.header a {
 .section.page {
     padding-top: 33px;
 	padding-bottom: 100px;
+	overflow: hidden;
 }
 
 .page h1 { 
@@ -2325,6 +2338,18 @@ header.header a {
 	font-size: 20px;
 	line-height: 34px;
 	text-indent: 32px;
+}
+
+@media(max-width: 767px) {
+	.news-detail .news-detail__body p:not(:last-child) {
+		margin-bottom: 24px;
+	}
+
+	.news-detail .news-detail__body p {
+		font-size: 18px;
+		line-height: 25px;
+		letter-spacing: 0.07em;
+	}
 }
 
 /* event__list */
@@ -2638,8 +2663,30 @@ header.header a {
 	}
 
 	.event__modal-img img {
-		max-width: 100%;
+		max-width: 330px;
 		height: auto;
+	}
+
+	.event__modal-title {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 40px;
+	}
+
+	.event__modal-info {
+		justify-content: space-between;
+	}
+
+	.event__info-top {
+		font-size: 16px;
+		line-height: 32px;
+		color: #636363;
+		gap: 8px;
+	}
+
+	.event__modal-info {
+		font-size: 16px;
+		line-height: 20px;
 	}
 }
 
@@ -2662,23 +2709,14 @@ header.header a {
 	.event__modal-content {
 		flex-direction: column;
 	}
-
-	.event__info-top {
-		font-size: 16px;
-		line-height: 32px;
-		color: #636363;
-		gap: 8px;
-	}
-
-	.event__modal-info {
-		font-size: 16px;
-		line-height: 20px;
-	}
 }
 
 .detail__slider {
 	width: 100%;
 	display: flex;
+	margin-bottom: 24px;
+	gap: 30px;
+	align-items: flex-start;
 }
 
 .splide__slide {
@@ -2687,6 +2725,10 @@ header.header a {
 
 .splide__slide.is-active {
   opacity: 1;
+}
+
+#thumbnail-slider .splide__track--draggable {
+	height: 100% !important;
 }
 
 #main-slider {
@@ -2698,7 +2740,6 @@ header.header a {
 }
 
 .splide img {
-	border-radius: 10px;
 	max-width: 100%;
 	height: auto;
 }
@@ -2737,24 +2778,26 @@ header.header a {
 
 .splide__arrows--ttb .splide__arrow--prev {
 	bottom: auto;
-	left: 0;
-	right: 0;
-	top: 0;
-	transform: none;
-	height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    top: -8px;
+    height: auto;
+    background: transparent;
 }
 
 .splide__arrows--ttb .splide__arrow--next {
-	bottom: 0;
-	left: 0;
-	right: 0;
+	bottom: -8px;
 	top: auto;
-	transform: none;
 	height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    background: transparent;
 }
 
 .splide__arrow svg {
-	fill: var(--color-white);
+	fill: var(--color-blue);
 }
 
 .splide__list .splide__slide {
@@ -2762,16 +2805,39 @@ header.header a {
     justify-content: flex-start;
 }
 
+.splide__pagination {
+	display: none;
+}
+
+@media(max-width: 991px) {
+	#thumbnail-slider {
+		display: none;
+	}
+
+	.splide__pagination {
+    	bottom: -33px;
+		display: flex;
+	}
+
+	.splide__pagination__page {
+    	background: #ccc;
+	}
+
+	.splide__pagination__page.is-active {
+    	background: var(--color-accent);
+	}
+}
+
 .filter-list {
 	max-height: 0;
     transition: max-height 0.3s ease-in-out;
 	overflow: hidden;
-	flex-wrap: wrap;
 }
 
 .filter-list.active {
 	max-height: 500px;
 	transition: max-height 0.3s ease-in-out;
+	gap: 24px;
 }
 
 /* Hide the default radio input */
@@ -2827,6 +2893,11 @@ header.header a {
 }
 
 .filter-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.filter-list__inner {
 	display: flex;
 	column-gap: 49px;
 	row-gap: 0;
@@ -2949,12 +3020,10 @@ header.header a {
 	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0.07em;
-	margin-bottom: 24px;
-	width: 100%;
 }
 
 @media(max-width: 576px) {
-	.filter-list {
+	.filter-list__inner {
 		gap: 24px;
 		flex-direction: column;
 	}

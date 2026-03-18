@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	/* search */
 
-	const searchButton = document.querySelectorAll('.search');
+	const searchButton = document.querySelectorAll('header .search');
 	const searchButtonClose = document.querySelector('.search__panel .close');
 
 	searchButton.forEach(search => {
@@ -283,7 +283,7 @@ if(document.querySelector('#main-slider')) {
 	var main = new Splide( '#main-slider', {
 		type      : 'fade',
 		rewind    : true,
-		pagination: false,
+		pagination: true,
 		arrows    : false,
 	} );
 
@@ -380,4 +380,10 @@ $( document ).ready(function() {
 
         },
     );
+
+	$('#thumbnail-slider').height($('#main-slider').height());
+});
+
+$(window).on('resize', function() {
+	$('#thumbnail-slider').height($('#main-slider').height());
 });
