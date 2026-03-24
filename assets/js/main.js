@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	/* mobile menu */
 	
-	const itemHasChildren = document.querySelectorAll('.item-has-children a');
+	const itemHasChildren = document.querySelectorAll('.mobile__menu-nav .item-has-children > a');
 	itemHasChildren.forEach(item => {
 		item.addEventListener('click', function(event) {
 
@@ -321,7 +321,10 @@ $( function() {
 
 $( document ).ready(function() {
 	$('.news__filter .open__filter').on('click', function() {
-		$('.filter-list').toggleClass('active');
+		$('.filter-list').stop().slideToggle('medium', function() {
+			if ($(this).is(':visible'))
+				$(this).css('display','flex');
+		});
 		$('.news__filter .reset__filter').toggleClass('active');
 		if($(this).children('span').html() == 'Расширенный поиск') {
 			$(this).children('span').html('Скрыть фильтр');
@@ -362,16 +365,18 @@ $( document ).ready(function() {
 		});
 	});
 
-	$('.header__nav > ul > .item-has-children a').hover(
+	$('.header__nav > ul > li').mouseleave(
 		function() {
 			$('.column__inner').html('');
         },
 	);
 	
-	$('.header__nav ul .item-has-children .sub-menu li').hover(
+	$('.header__nav ul .item-has-children .sub-menu li span').on('click',
         function() {
 			$('.column__inner').html('');
-            var content = $(this).find('.sub-menu').clone();
+			$(".header__nav li").not(this).removeClass('active');
+			$(this).parent().addClass('active');
+            var content = $(this).parent().find('.sub-menu').clone();
 			if(content.length) {
 				$('.column__inner').html(content.show());
 			} else {
