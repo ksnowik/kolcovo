@@ -176,6 +176,10 @@ body {
 	font-family: 'DIN Pro';
 }
 
+.ui-widget {
+	font-family: 'DIN Pro';
+}
+
 body.fixed {
 	overflow: hidden;
 }
@@ -606,7 +610,7 @@ header.header a {
 
 .header__nav ul li>.sub-menu__wrapper>.sub-menu li a {
 	color: #1C1B28;
-	display: inline-block;
+	display: block;
 	padding: 8px 25px 8px 8px;
 }
 
@@ -616,14 +620,12 @@ header.header a {
 	text-decoration: none;
 }
 
-.sub-menu li.item-has-children>a+span {
-	background: url("data:image/svg+xml;charset=UTF-8, %3csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 3.46413L1.73994e-07 6.92823L4.76836e-07 2.88248e-05L6 3.46413Z' fill='%23636363'/%3e%3c/svg%3e ") no-repeat center center;
+.sub-menu li.item-has-children>a:after {
+	content: url("data:image/svg+xml;charset=UTF-8, %3csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 3.46413L1.73994e-07 6.92823L4.76836e-07 2.88248e-05L6 3.46413Z' fill='%23636363'/%3e%3c/svg%3e ");
 	top: 50%;
 	right: 11px;
 	transform: translateY(-50%);
 	position: absolute;
-	width: 33px;
-	height: 33px;
 	cursor: pointer;
 }
 
@@ -2076,10 +2078,17 @@ header.header a {
 .page h1 { 
 	font-weight: 700;
 	font-size: 32px;
-	line-height: auto;
+	line-height: normal;
 	letter-spacing: 0.07em;
 	color: #000000;
 	margin-bottom: 37px;
+}
+
+@media(max-width: 576px) {
+	.page h1 {
+		font-size: 24px;
+		line-height: 24px;
+	}
 }
 
 .spoiler-list ul {
@@ -2492,7 +2501,7 @@ header.header a {
 .event__title {
 	display: flex;
 	gap: 85px;
-	align-items: center;
+	align-items: flex-end;
 	margin-bottom: 48px;
 }
 
@@ -2520,6 +2529,17 @@ header.header a {
 	width: fit-content;
 	margin-left: auto;
 	margin-bottom: 16px;
+}
+
+.event__calendar-button input {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #105980;
+	background-position: center center;
+	font-size: 0;
+	cursor: pointer;
+	border-radius: 50%;
+	background-image: url('../images/calendar.svg');
 }
 
 .slider__nav {
@@ -2578,6 +2598,10 @@ header.header a {
 }
 
 @media(max-width: 576px) {
+	.event__title-result {
+		font-size: 14px;
+	}
+
 	.event__list {
 		gap: 15px;
 	}
@@ -2600,6 +2624,39 @@ header.header a {
 
 	.event__title-button .btn {
 		width: 100%;
+		font-size: 16px;
+		height: 40px;
+		padding: 10px 0;
+        height: 40px;
+	}
+
+	.calendar__item-title {
+		font-size: 18px;
+	}
+
+	.event__buttons .btn {
+		font-size: 14px;
+		height: 32px;
+	}
+
+	.event__buttons {
+		align-items: center;
+	}
+}
+
+@media(max-width: 480px) {
+	.event__item-title {
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+
+	.event__item-date {
+		margin-bottom: 15px;
+	}
+
+	.event__item-date,
+	.event__item-place {
+		font-size: 12px;
 	}
 }
 
@@ -3004,6 +3061,12 @@ header.header a {
 	font-size: 13px;
 	line-height: 20px;
 	color: rgba(27, 31, 59, 0.4);
+	text-transform: uppercase;
+}
+
+.ui-datepicker tbody td {
+    font-size: 15px;
+    line-height: 24px;
 }
 
 .ui-datepicker-year {

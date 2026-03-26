@@ -294,7 +294,6 @@ if(document.querySelector('#main-slider')) {
 		pagination  : false,
 		cover       : true,
 		isNavigation: true,
-		type: 'loop', 
 		direction: "ttb",
 		heightRatio: 0.67,
 		perPage: 5,
@@ -368,15 +367,17 @@ $( document ).ready(function() {
 	$('.header__nav > ul > li').mouseleave(
 		function() {
 			$('.column__inner').html('');
+			$('.header__nav li').removeClass('active');
         },
 	);
 	
-	$('.header__nav ul .item-has-children .sub-menu li span').on('click',
-        function() {
+	$('.header__nav ul .item-has-children .sub-menu > li.item-has-children').on('click',
+        function(event) {
+			event.preventDefault();
 			$('.column__inner').html('');
 			$(".header__nav li").not(this).removeClass('active');
-			$(this).parent().addClass('active');
-            var content = $(this).parent().find('.sub-menu').clone();
+			$(this).addClass('active');
+            var content = $(this).find('.sub-menu').clone();
 			if(content.length) {
 				$('.column__inner').html(content.show());
 			} else {
